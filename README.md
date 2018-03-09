@@ -9,9 +9,11 @@ Este projeto está sob licença [MIT](LICENSE).
 
 ### Dependências
 - Python 3.4+
-- Logo coloco a lista completa.
+- Consulte as demais [aqui](requirements.txt).
 
 ### Comandos
 - makememe url nome posicionamento "Texto"
 - getmeme nome
 - randmeme
+- help
+- stats

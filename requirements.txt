@@ -1,0 +1,10 @@
+aiohttp==1.0.5
+async-timeout==2.0.0
+chardet==3.0.4
+decorator==4.2.1
+discord.py==0.16.12
+multidict==4.1.0
+Pillow==5.0.0
+six==1.11.0
+validators==0.12.1
+websockets==3.4
