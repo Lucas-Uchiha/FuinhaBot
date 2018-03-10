@@ -4,12 +4,12 @@ from os.path import isfile, join
 
 
 class File:
-    _memes_path = "../Memes/"
+    _memes_path = "./Memes/"
 
     @staticmethod
     def loadConfig():
         try:
-            return json.load(open("../config.json", "r"))
+            return json.load(open("./config.json", "r"))
         except FileNotFoundError:
             print("O arquivo config.json não foi encontrado.")
             exit(1)

@@ -21,20 +21,20 @@ class ImageHandler:
 
     @staticmethod
     def draw_in_image(in_name, out_name, position="TOP", text=""):
-        file = Path("../Memes/" + out_name + ".jpg")
+        file = Path("./Memes/" + out_name + ".jpg")
         ext = "." + get_file_extension(in_name)
 
         if not file.is_file():
             img = ImageHandler._resize(in_name)
             draw = ImageDraw.Draw(img)
             ImageHandler._draw_text(draw, text, position)
-            img.save("../Memes/" + out_name + ext)
+            img.save("./Memes/" + out_name + ext)
         else:
             raise FileAlreadyExists
 
     @staticmethod
     def _resize(name):
-        img = Image.open("../Downloaded/" + name)
+        img = Image.open("./Downloaded/" + name)
         img.thumbnail(ImageHandler._size, Image.ANTIALIAS)
 
         return img

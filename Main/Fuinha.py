@@ -110,7 +110,7 @@ class Fuinha(discord.Client):
         if len(args) >= 1 and is_string_formated(args[0], 1, 20):
             result = self._search_meme(args[0])
             if isinstance(result, str):
-                file = "../Memes/" + result
+                file = "./Memes/" + result
                 await self.send_file(message.channel, file)
             else:
                 msg = "Esse meme ainda não existe. =/"
@@ -120,8 +120,8 @@ class Fuinha(discord.Client):
 
     async def _randmeme(self, message):
         self.log.salva("Comando randmeme invocado por: " + str(message.author))
-        n = random.randint(0, len(self.meme_list))
-        file = "../Memes/" + self.meme_list[n]
+        n = random.randint(0, len(self.meme_list) - 1)
+        file = "./Memes/" + self.meme_list[n]
         await self.send_file(message.channel, file)
 
     '#--------------------- Metodos privados da classe ---------------------#'

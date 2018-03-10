@@ -19,6 +19,6 @@ class Log:
         print(msg)
 
     def _escreveArquivo(self,msg):
-        file = open("../Logs/" + Time.dataFormatada() + ".txt","a")
+        file = open("./Logs/" + Time.dataFormatada() + ".txt","a")
         file.write(msg + "\n")
         file.close()
